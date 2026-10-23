@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - Crear, actualizar y eliminar un proyecto con un usuario nuevo</title>
+<link href="../../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<div class="breadcrumbs">
+<a class="breadcrumb" href="../../index.html">all</a> &gt; 
+<a class="breadcrumb" href="../index.html">runner.RunnerTest</a> &gt; 
+<a class="breadcrumb" href="index.html">feature_classpath_features/project_crud.feature</a> &gt; 
+<span class="breadcrumb">Crear, actualizar y eliminar un proyecto con un usuario nuevo</span>
+</div>
+<div class="tab-container">
+<ul class="tabLinks">
+<li>
+<a class="successGroup" href="#">Gradle Test Run :test</a>
+</li>
+</ul>
+<div class="tab">
+<h2>Gradle Test Run :test</h2>
+<h1>Crear, actualizar y eliminar un proyecto con un usuario nuevo</h1>
+<div class="tab-container">
+<ul class="tabLinks">
+<li>
+<a class="" href="#">summary</a>
+</li>
+<li>
+<a class="" href="#">standard output</a>
+</li>
+</ul>
+<div class="tab">
+<h2>summary</h2>
+<div>
+<div class="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox">
+<div class="counter">0</div>
+<p>skipped</p>
+</div>
+</td>
+<td>
+<div class="infoBox duration">
+<div class="counter">4.122s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="tab">
+<h2>standard output</h2>
+<span class="code">
+<pre id="root-0-test-stdout-Crear, actualizar y eliminar un proyecto con un usuario nuevo">
+@crud
+Escenario: Crear, actualizar y eliminar un proyecto con un usuario nuevo ?[90m# features/project_crud.feature:8?[0m
+Request method:	POST
+Request URI:	https://todo.ly/api/user.json
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=application/json, application/javascript, text/javascript, text/json
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;Email&quot;: &quot;daniela.quispe.1792631879011@mail.com&quot;,
+    &quot;FullName&quot;: &quot;Daniela Quispe&quot;,
+    &quot;Password&quot;: &quot;Qa123456!&quot;
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, must-revalidate
+Pragma: no-cache
+Content-Type: application/json; charset=utf-8
+Expires: -1
+Server: Microsoft-IIS/10.0
+Set-Cookie: ASP.NET_SessionId=m3t0zyrm0umnli5z2vyxoavu; path=/; HttpOnly; SameSite=Lax
+X-AspNetMvc-Version: 2.0
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+Date: Thu, 22 Oct 2026 01:17:58 GMT
+Content-Length: 316
+
+{
+    &quot;Id&quot;: 834189,
+    &quot;Email&quot;: &quot;daniela.quispe.1792631879011@mail.com&quot;,
+    &quot;Password&quot;: null,
+    &quot;FullName&quot;: &quot;Daniela Quispe&quot;,
+    &quot;TimeZone&quot;: 0,
+    &quot;IsProUser&quot;: false,
+    &quot;DefaultProjectId&quot;: 4559957,
+    &quot;AddItemMoreExpanded&quot;: false,
+    &quot;EditDueDateMoreExpanded&quot;: false,
+    &quot;ListSortType&quot;: 0,
+    &quot;FirstDayOfWeek&quot;: 0,
+    &quot;NewTaskDueDate&quot;: -1,
+    &quot;TimeZoneId&quot;: &quot;Pacific Standard Time&quot;
+}
+  ?[32mDado ?[0m?[32mcreo un usuario nuevo?[0m                                             ?[90m# steps.ProjectSteps.createNewUser()?[0m
+Request method:	GET
+Request URI:	https://todo.ly/api/authentication/token.json
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=application/json, application/javascript, text/javascript, text/json
+				Authorization=Basic ZGFuaWVsYS5xdWlzcGUuMTc5MjYzMTg3OTAxMUBtYWlsLmNvbTpRYTEyMzQ1NiE=
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:			&lt;none&gt;
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, must-revalidate
+Pragma: no-cache
+Content-Type: application/json; charset=utf-8
+Expires: -1
+Server: Microsoft-IIS/10.0
+Set-Cookie: ASP.NET_SessionId=mkxe1b3ovu5j0tjmq1neqwb5; path=/; HttpOnly; SameSite=Lax
+X-AspNetMvc-Version: 2.0
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+Date: Thu, 22 Oct 2026 01:17:59 GMT
+Content-Length: 145
+
+{
+    &quot;TokenString&quot;: &quot;b7ce19b747cc4b95a104a76e3367d356&quot;,
+    &quot;UserEmail&quot;: &quot;daniela.quispe.1792631879011@mail.com&quot;,
+    &quot;ExpirationTime&quot;: &quot;/Date(1792649879500)/&quot;
+}
+  ?[32mY ?[0m?[32mobtengo el token de autenticación del usuario?[0m                        ?[90m# steps.ProjectSteps.obtainAuthenticationToken()?[0m
+Request method:	POST
+Request URI:	https://todo.ly/api/projects.json
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=application/json, application/javascript, text/javascript, text/json
+				Token=b7ce19b747cc4b95a104a76e3367d356
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;Content&quot;: &quot;Proyecto QA&quot;
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, must-revalidate
+Pragma: no-cache
+Content-Type: application/json; charset=utf-8
+Expires: -1
+Server: Microsoft-IIS/10.0
+Set-Cookie: ASP.NET_SessionId=oents3hpivntadpaobbnnzey; path=/; HttpOnly; SameSite=Lax
+X-AspNetMvc-Version: 2.0
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+Date: Thu, 22 Oct 2026 01:17:59 GMT
+Content-Length: 399
+
+{
+    &quot;Id&quot;: 4559963,
+    &quot;Content&quot;: &quot;Proyecto QA&quot;,
+    &quot;ItemsCount&quot;: 0,
+    &quot;Icon&quot;: 0,
+    &quot;ItemType&quot;: 2,
+    &quot;ParentId&quot;: null,
+    &quot;Collapsed&quot;: false,
+    &quot;ItemOrder&quot;: 6,
+    &quot;Children&quot;: [
+        
+    ],
+    &quot;IsProjectShared&quot;: false,
+    &quot;ProjectShareOwnerName&quot;: null,
+    &quot;ProjectShareOwnerEmail&quot;: null,
+    &quot;IsShareApproved&quot;: false,
+    &quot;IsOwnProject&quot;: true,
+    &quot;LastSyncedDateTime&quot;: &quot;/Date(1792631880112)/&quot;,
+    &quot;LastUpdatedDate&quot;: &quot;/Date(1792631880110)/&quot;,
+    &quot;Deleted&quot;: false,
+    &quot;SyncClientCreationId&quot;: null
+}
+  ?[32mCuando ?[0m?[32mcreo un proyecto con nombre ?[0m?[32m?[1m&quot;Proyecto QA&quot;?[0m                       ?[90m# steps.ProjectSteps.createProject(java.lang.String)?[0m
+  ?[32mEntonces ?[0m?[32mel código de respuesta es ?[0m?[32m?[1m200?[0m                                 ?[90m# steps.ProjectSteps.verifyStatusCode(int)?[0m
+  ?[32mY ?[0m?[32mel campo ?[0m?[32m?[1m&quot;Content&quot;?[0m?[32m es ?[0m?[32m?[1m&quot;Proyecto QA&quot;?[0m                                  ?[90m# steps.ProjectSteps.verifyFieldValue(java.lang.String,java.lang.String)?[0m
+Request method:	PUT
+Request URI:	https://todo.ly/api/projects/4559963.json
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=application/json, application/javascript, text/javascript, text/json
+				Token=b7ce19b747cc4b95a104a76e3367d356
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:
+{
+    &quot;Content&quot;: &quot;Proyecto QA Editado&quot;
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, must-revalidate
+Pragma: no-cache
+Content-Type: application/json; charset=utf-8
+Expires: -1
+Server: Microsoft-IIS/10.0
+Set-Cookie: ASP.NET_SessionId=r5pf4qmajryo0av4lttmkmci; path=/; HttpOnly; SameSite=Lax
+X-AspNetMvc-Version: 2.0
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+Date: Thu, 22 Oct 2026 01:18:00 GMT
+Content-Length: 407
+
+{
+    &quot;Id&quot;: 4559963,
+    &quot;Content&quot;: &quot;Proyecto QA Editado&quot;,
+    &quot;ItemsCount&quot;: 0,
+    &quot;Icon&quot;: 0,
+    &quot;ItemType&quot;: 2,
+    &quot;ParentId&quot;: null,
+    &quot;Collapsed&quot;: false,
+    &quot;ItemOrder&quot;: 6,
+    &quot;Children&quot;: [
+        
+    ],
+    &quot;IsProjectShared&quot;: false,
+    &quot;ProjectShareOwnerName&quot;: null,
+    &quot;ProjectShareOwnerEmail&quot;: null,
+    &quot;IsShareApproved&quot;: false,
+    &quot;IsOwnProject&quot;: true,
+    &quot;LastSyncedDateTime&quot;: &quot;/Date(1792631880751)/&quot;,
+    &quot;LastUpdatedDate&quot;: &quot;/Date(1792631880750)/&quot;,
+    &quot;Deleted&quot;: false,
+    &quot;SyncClientCreationId&quot;: null
+}
+  ?[32mCuando ?[0m?[32mactualizo el proyecto con nombre ?[0m?[32m?[1m&quot;Proyecto QA Editado&quot;?[0m          ?[90m# steps.ProjectSteps.updateProject(java.lang.String)?[0m
+  ?[32mEntonces ?[0m?[32mel código de respuesta es ?[0m?[32m?[1m200?[0m                                 ?[90m# steps.ProjectSteps.verifyStatusCode(int)?[0m
+  ?[32mY ?[0m?[32mel campo ?[0m?[32m?[1m&quot;Content&quot;?[0m?[32m es ?[0m?[32m?[1m&quot;Proyecto QA Editado&quot;?[0m                          ?[90m# steps.ProjectSteps.verifyFieldValue(java.lang.String,java.lang.String)?[0m
+Request method:	DELETE
+Request URI:	https://todo.ly/api/projects/4559963.json
+Proxy:			&lt;none&gt;
+Request params:	&lt;none&gt;
+Query params:	&lt;none&gt;
+Form params:	&lt;none&gt;
+Path params:	&lt;none&gt;
+Headers:		Accept=application/json, application/javascript, text/javascript, text/json
+				Token=b7ce19b747cc4b95a104a76e3367d356
+				Content-Type=application/json
+Cookies:		&lt;none&gt;
+Multiparts:		&lt;none&gt;
+Body:			&lt;none&gt;
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, must-revalidate
+Pragma: no-cache
+Content-Type: application/json; charset=utf-8
+Expires: -1
+Server: Microsoft-IIS/10.0
+Set-Cookie: ASP.NET_SessionId=4523iweyg4icatfrlb3bxzgo; path=/; HttpOnly; SameSite=Lax
+X-AspNetMvc-Version: 2.0
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+Date: Thu, 22 Oct 2026 01:18:00 GMT
+Content-Length: 406
+
+{
+    &quot;Id&quot;: 4559963,
+    &quot;Content&quot;: &quot;Proyecto QA Editado&quot;,
+    &quot;ItemsCount&quot;: 0,
+    &quot;Icon&quot;: 0,
+    &quot;ItemType&quot;: 2,
+    &quot;ParentId&quot;: null,
+    &quot;Collapsed&quot;: false,
+    &quot;ItemOrder&quot;: 6,
+    &quot;Children&quot;: [
+        
+    ],
+    &quot;IsProjectShared&quot;: false,
+    &quot;ProjectShareOwnerName&quot;: null,
+    &quot;ProjectShareOwnerEmail&quot;: null,
+    &quot;IsShareApproved&quot;: false,
+    &quot;IsOwnProject&quot;: true,
+    &quot;LastSyncedDateTime&quot;: &quot;/Date(1792631881377)/&quot;,
+    &quot;LastUpdatedDate&quot;: &quot;/Date(1792631881370)/&quot;,
+    &quot;Deleted&quot;: true,
+    &quot;SyncClientCreationId&quot;: null
+}
+  ?[32mCuando ?[0m?[32melimino el proyecto?[0m                                             ?[90m# steps.ProjectSteps.deleteProject()?[0m
+  ?[32mEntonces ?[0m?[32mel código de respuesta es ?[0m?[32m?[1m200?[0m                                 ?[90m# steps.ProjectSteps.verifyStatusCode(int)?[0m
+  ?[32mY ?[0m?[32mel campo ?[0m?[32m?[1m&quot;Deleted&quot;?[0m?[32m es ?[0m?[32m?[1m&quot;true&quot;?[0m                                         ?[90m# steps.ProjectSteps.verifyFieldValue(java.lang.String,java.lang.String)?[0m
+</pre>
+<button class="clipboard-copy-btn" aria-label="Copy to clipboard" data-copy-element-id="root-0-test-stdout-Crear, actualizar y eliminar un proyecto con un usuario nuevo">Copy</button>
+</span>
+</div>
+</div>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="https://www.gradle.org">Gradle 9.4.1</a> at Oct 21, 2026, 9:18:03 PM</p>
+</div>
+</div>
+</body>
+</html>

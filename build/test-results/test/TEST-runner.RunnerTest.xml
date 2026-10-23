@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="runner.RunnerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-22T01:17:58.789Z" hostname="4M" time="4.304">
+  <properties/>
+  <testcase name="Crear, actualizar y eliminar un proyecto con un usuario nuevo" classname="runner.RunnerTest" time="4.122"/>
+  <system-out><![CDATA[
+@crud
+Escenario: Crear, actualizar y eliminar un proyecto con un usuario nuevo ?[90m# features/project_crud.feature:8?[0m
+Request method:	POST
+Request URI:	https://todo.ly/api/user.json
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/json, application/javascript, text/javascript, text/json
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "Email": "daniela.quispe.1792631879011@mail.com",
+    "FullName": "Daniela Quispe",
+    "Password": "Qa123456!"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, must-revalidate
+Pragma: no-cache
+Content-Type: application/json; charset=utf-8
+Expires: -1
+Server: Microsoft-IIS/10.0
+Set-Cookie: ASP.NET_SessionId=m3t0zyrm0umnli5z2vyxoavu; path=/; HttpOnly; SameSite=Lax
+X-AspNetMvc-Version: 2.0
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+Date: Thu, 22 Oct 2026 01:17:58 GMT
+Content-Length: 316
+
+{
+    "Id": 834189,
+    "Email": "daniela.quispe.1792631879011@mail.com",
+    "Password": null,
+    "FullName": "Daniela Quispe",
+    "TimeZone": 0,
+    "IsProUser": false,
+    "DefaultProjectId": 4559957,
+    "AddItemMoreExpanded": false,
+    "EditDueDateMoreExpanded": false,
+    "ListSortType": 0,
+    "FirstDayOfWeek": 0,
+    "NewTaskDueDate": -1,
+    "TimeZoneId": "Pacific Standard Time"
+}
+  ?[32mDado ?[0m?[32mcreo un usuario nuevo?[0m                                             ?[90m# steps.ProjectSteps.createNewUser()?[0m
+Request method:	GET
+Request URI:	https://todo.ly/api/authentication/token.json
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/json, application/javascript, text/javascript, text/json
+				Authorization=Basic ZGFuaWVsYS5xdWlzcGUuMTc5MjYzMTg3OTAxMUBtYWlsLmNvbTpRYTEyMzQ1NiE=
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, must-revalidate
+Pragma: no-cache
+Content-Type: application/json; charset=utf-8
+Expires: -1
+Server: Microsoft-IIS/10.0
+Set-Cookie: ASP.NET_SessionId=mkxe1b3ovu5j0tjmq1neqwb5; path=/; HttpOnly; SameSite=Lax
+X-AspNetMvc-Version: 2.0
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+Date: Thu, 22 Oct 2026 01:17:59 GMT
+Content-Length: 145
+
+{
+    "TokenString": "b7ce19b747cc4b95a104a76e3367d356",
+    "UserEmail": "daniela.quispe.1792631879011@mail.com",
+    "ExpirationTime": "/Date(1792649879500)/"
+}
+  ?[32mY ?[0m?[32mobtengo el token de autenticación del usuario?[0m                        ?[90m# steps.ProjectSteps.obtainAuthenticationToken()?[0m
+Request method:	POST
+Request URI:	https://todo.ly/api/projects.json
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/json, application/javascript, text/javascript, text/json
+				Token=b7ce19b747cc4b95a104a76e3367d356
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "Content": "Proyecto QA"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, must-revalidate
+Pragma: no-cache
+Content-Type: application/json; charset=utf-8
+Expires: -1
+Server: Microsoft-IIS/10.0
+Set-Cookie: ASP.NET_SessionId=oents3hpivntadpaobbnnzey; path=/; HttpOnly; SameSite=Lax
+X-AspNetMvc-Version: 2.0
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+Date: Thu, 22 Oct 2026 01:17:59 GMT
+Content-Length: 399
+
+{
+    "Id": 4559963,
+    "Content": "Proyecto QA",
+    "ItemsCount": 0,
+    "Icon": 0,
+    "ItemType": 2,
+    "ParentId": null,
+    "Collapsed": false,
+    "ItemOrder": 6,
+    "Children": [
+        
+    ],
+    "IsProjectShared": false,
+    "ProjectShareOwnerName": null,
+    "ProjectShareOwnerEmail": null,
+    "IsShareApproved": false,
+    "IsOwnProject": true,
+    "LastSyncedDateTime": "/Date(1792631880112)/",
+    "LastUpdatedDate": "/Date(1792631880110)/",
+    "Deleted": false,
+    "SyncClientCreationId": null
+}
+  ?[32mCuando ?[0m?[32mcreo un proyecto con nombre ?[0m?[32m?[1m"Proyecto QA"?[0m                       ?[90m# steps.ProjectSteps.createProject(java.lang.String)?[0m
+  ?[32mEntonces ?[0m?[32mel código de respuesta es ?[0m?[32m?[1m200?[0m                                 ?[90m# steps.ProjectSteps.verifyStatusCode(int)?[0m
+  ?[32mY ?[0m?[32mel campo ?[0m?[32m?[1m"Content"?[0m?[32m es ?[0m?[32m?[1m"Proyecto QA"?[0m                                  ?[90m# steps.ProjectSteps.verifyFieldValue(java.lang.String,java.lang.String)?[0m
+Request method:	PUT
+Request URI:	https://todo.ly/api/projects/4559963.json
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/json, application/javascript, text/javascript, text/json
+				Token=b7ce19b747cc4b95a104a76e3367d356
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "Content": "Proyecto QA Editado"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, must-revalidate
+Pragma: no-cache
+Content-Type: application/json; charset=utf-8
+Expires: -1
+Server: Microsoft-IIS/10.0
+Set-Cookie: ASP.NET_SessionId=r5pf4qmajryo0av4lttmkmci; path=/; HttpOnly; SameSite=Lax
+X-AspNetMvc-Version: 2.0
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+Date: Thu, 22 Oct 2026 01:18:00 GMT
+Content-Length: 407
+
+{
+    "Id": 4559963,
+    "Content": "Proyecto QA Editado",
+    "ItemsCount": 0,
+    "Icon": 0,
+    "ItemType": 2,
+    "ParentId": null,
+    "Collapsed": false,
+    "ItemOrder": 6,
+    "Children": [
+        
+    ],
+    "IsProjectShared": false,
+    "ProjectShareOwnerName": null,
+    "ProjectShareOwnerEmail": null,
+    "IsShareApproved": false,
+    "IsOwnProject": true,
+    "LastSyncedDateTime": "/Date(1792631880751)/",
+    "LastUpdatedDate": "/Date(1792631880750)/",
+    "Deleted": false,
+    "SyncClientCreationId": null
+}
+  ?[32mCuando ?[0m?[32mactualizo el proyecto con nombre ?[0m?[32m?[1m"Proyecto QA Editado"?[0m          ?[90m# steps.ProjectSteps.updateProject(java.lang.String)?[0m
+  ?[32mEntonces ?[0m?[32mel código de respuesta es ?[0m?[32m?[1m200?[0m                                 ?[90m# steps.ProjectSteps.verifyStatusCode(int)?[0m
+  ?[32mY ?[0m?[32mel campo ?[0m?[32m?[1m"Content"?[0m?[32m es ?[0m?[32m?[1m"Proyecto QA Editado"?[0m                          ?[90m# steps.ProjectSteps.verifyFieldValue(java.lang.String,java.lang.String)?[0m
+Request method:	DELETE
+Request URI:	https://todo.ly/api/projects/4559963.json
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=application/json, application/javascript, text/javascript, text/json
+				Token=b7ce19b747cc4b95a104a76e3367d356
+				Content-Type=application/json
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Cache-Control: no-cache, no-store, must-revalidate
+Pragma: no-cache
+Content-Type: application/json; charset=utf-8
+Expires: -1
+Server: Microsoft-IIS/10.0
+Set-Cookie: ASP.NET_SessionId=4523iweyg4icatfrlb3bxzgo; path=/; HttpOnly; SameSite=Lax
+X-AspNetMvc-Version: 2.0
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+Date: Thu, 22 Oct 2026 01:18:00 GMT
+Content-Length: 406
+
+{
+    "Id": 4559963,
+    "Content": "Proyecto QA Editado",
+    "ItemsCount": 0,
+    "Icon": 0,
+    "ItemType": 2,
+    "ParentId": null,
+    "Collapsed": false,
+    "ItemOrder": 6,
+    "Children": [
+        
+    ],
+    "IsProjectShared": false,
+    "ProjectShareOwnerName": null,
+    "ProjectShareOwnerEmail": null,
+    "IsShareApproved": false,
+    "IsOwnProject": true,
+    "LastSyncedDateTime": "/Date(1792631881377)/",
+    "LastUpdatedDate": "/Date(1792631881370)/",
+    "Deleted": true,
+    "SyncClientCreationId": null
+}
+  ?[32mCuando ?[0m?[32melimino el proyecto?[0m                                             ?[90m# steps.ProjectSteps.deleteProject()?[0m
+  ?[32mEntonces ?[0m?[32mel código de respuesta es ?[0m?[32m?[1m200?[0m                                 ?[90m# steps.ProjectSteps.verifyStatusCode(int)?[0m
+  ?[32mY ?[0m?[32mel campo ?[0m?[32m?[1m"Deleted"?[0m?[32m es ?[0m?[32m?[1m"true"?[0m                                         ?[90m# steps.ProjectSteps.verifyFieldValue(java.lang.String,java.lang.String)?[0m
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
